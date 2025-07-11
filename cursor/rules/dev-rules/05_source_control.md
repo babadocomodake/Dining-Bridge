@@ -4,6 +4,7 @@
 - GitHubリポジトリを利用（プライベート/パブリック設定はクライアント指示に従う）
 - プロジェクトごとにリポジトリ分割も検討
 - README、CONTRIBUTING、CODEOWNERS等の管理
+- **.gitignoreファイルもAIアシスタントが一元管理し、内容の追加・修正・履歴管理を行う。ユーザーは直接編集せず、AIに指示・申請すること。**
 
 ## 2. ブランチ戦略
 - main（本番）、develop（開発）、feature/xxx（機能単位）、hotfix/xxx（緊急修正）
