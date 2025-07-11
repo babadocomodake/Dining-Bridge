@@ -1,0 +1,38 @@
+2. MCPサーバー（Supabase）でできること
+MCPサーバーを使うことで、Supabaseプロジェクトの管理・調査・運用がコマンドやAPI経由で可能です。
+主な機能は以下の通りです。
+プロジェクト・組織管理
+list_projects：Supabaseプロジェクト一覧の取得
+get_project：特定プロジェクトの詳細情報取得
+list_organizations：組織一覧の取得
+get_organization：組織の詳細情報取得
+データベース・スキーマ管理
+list_tables：テーブル一覧の取得
+list_extensions：有効な拡張機能一覧
+list_migrations：マイグレーション履歴の取得
+apply_migration：新しいマイグレーションの適用
+execute_sql：任意のSQLクエリ実行
+認証・APIキー管理
+get_project_url：APIエンドポイントURLの取得
+get_anon_key：匿名APIキーの取得
+ログ・監査
+get_logs：API/DB/認証/ストレージなど各種ログの取得
+エッジ関数・ブランチ管理
+list_edge_functions：エッジ関数一覧
+deploy_edge_function：エッジ関数のデプロイ
+list_branches：DBブランチ一覧
+create_branch：新しいDBブランチ作成
+merge_branch：ブランチのマージ
+delete_branch：ブランチの削除
+reset_branch：ブランチのリセット
+rebase_branch：ブランチのリベース
+型生成
+generate_typescript_types：DBスキーマからTypeScript型を自動生成
+3. どんな調査・運用ができる？
+テーブルやユーザー情報の確認（list_tables など）
+認証やAPIエラーの詳細ログ取得（get_logs）
+DBスキーマやRLS（Row Level Security）設定の確認
+APIキーやエンドポイントの再取得
+マイグレーションやスキーマ変更の適用・履歴確認
+本番・開発ブランチの切り替えや管理
+型安全なフロントエンド開発のための型自動生成

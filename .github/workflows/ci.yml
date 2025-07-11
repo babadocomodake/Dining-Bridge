@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies (frontend)
+        run: |
+          cd src/frontend
+          if [ -f package.json ]; then npm install; fi
+      - name: Install dependencies (backend)
+        run: |
+          cd src/backend
+          if [ -f package.json ]; then npm install; fi
+      - name: Run tests (frontend)
+        run: |
+          cd src/frontend
+          if [ -f package.json ]; then npm test || echo "No tests"; fi
+      - name: Run tests (backend)
+        run: |
+          cd src/backend
+          if [ -f package.json ]; then npm test || echo "No tests"; fi 

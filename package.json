@@ -1,0 +1,20 @@
+{
+  "name": "dining-bridge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "@supabase/mcp-server-supabase": "^0.4.5",
+    "dotenv": "^17.1.0"
+  }
+}
