@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+
+# dotenv
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# MCP/AI/Editor
+mcp.json
+.cursor/
+.vscode/
+.idea/
+
+# Supabase
+supabase/.temp/
+supabase/.env
+supabase/migrations/.DS_Store
+
+# Build/Output
+coverage/
+dist/
+build/
+tmp/
+log/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+
+# Vercel/Next.js
+.vercel/
+.next/
+.cache/
+.turbo/
+
+# Sentry
+.sentry/
+
+# その他
+*.log 
